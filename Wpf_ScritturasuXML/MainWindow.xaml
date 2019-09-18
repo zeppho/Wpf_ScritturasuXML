@@ -1,0 +1,98 @@
+﻿<Window x:Class="Wpf_ScritturasuXML.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_ScritturasuXML"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Name="Salva" Content="Salva su XML" FontWeight="Bold" Margin="5,5,5.5,0" Click="Salva_Click" Height="20" VerticalAlignment="Top"/>
+                <Button Grid.Column="1" Name="Cancella" Content="Cancella Tutto" FontWeight="Bold" Margin="5 5 5 5" Click="Button_Click"/>
+
+            </Grid>
+            <!-- PRIMA PARTE, NOME/COGNOME/INDIRIZZO/DDN/CITTA'/CAP -->
+
+            <Label Content="Anagrafica" FontSize="12" FontWeight="Bold"  />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- PRIMA COLONNA -->
+                <StackPanel Grid.Column="0">
+                    <Label  Content="Nome" Margin="2 0 0 0"/>
+                    <TextBox  Name="nome" Margin="5 0 5 5" Background="AliceBlue"/>
+                </StackPanel>
+
+                <!-- SECONDA COLONNA -->
+                <StackPanel Grid.Column="1">
+                    <Label Content="Cognome" Margin="2 0 0 0" />
+                    <TextBox   Name="cognome" Text="" Margin="5 0 5 5" Background="AliceBlue" />
+                </StackPanel>
+
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- PRIMA COLONNA -->
+                <StackPanel Grid.Column="0">
+                    <Label  Content="Indirizzo" Margin="2 0 0 0"/>
+                    <TextBox  Name="indirizzo" Margin="5 0 5 5" Background="AliceBlue"/>
+                    <Label  Content="Luogo di Nascita" Margin="2 0 0 0"/>
+                    <TextBox  Name="citta" Margin="5 0 5 5" Background="AliceBlue"/>
+                    <Label  Content="Codice Postale" Margin="2 0 0 0"/>
+                    <TextBox  Name="cap" Margin="5 0 5 5" Background="AliceBlue"/>
+                </StackPanel>
+
+                <!-- SECONDA COLONNA -->
+                <StackPanel Grid.Column="1">
+                    <Label  Content="Data di Nascita" Margin="2 0 0 0"/>
+                    <Calendar Height="170"  x:Name="Calendario"></Calendar>
+                </StackPanel>
+
+            </Grid>
+            <!-- SECONDA PARTE, EMAIL/TELEFONO/AZIENDA/PIVA -->
+
+            <Label Content="Informazioni Aggiuntive" FontSize="12" FontWeight="Bold"  />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- PRIMA COLONNA -->
+                <StackPanel Grid.Column="0">
+                    <Label  Content="Indirizzo Email" Margin="2 0 0 0"/>
+                    <TextBox  Name="email" Margin="5 0 5 5" Background="AliceBlue"/>
+                    <Label  Content="Telefono" Margin="2 0 0 0"/>
+                    <TextBox  Name="telefono" Margin="5 0 5 5" Background="AliceBlue"/>
+                </StackPanel>
+
+                <!-- SECONDA COLONNA -->
+                <StackPanel Grid.Column="1">
+                    <Label  Content="Azienda" Margin="2 0 0 0"/>
+                    <TextBox  Name="nomeazienda" Margin="5 0 5 5" Background="AliceBlue"/>
+                    <Label  Content="Partita IVA" Margin="2 0 0 0"/>
+                    <TextBox  Name="partitaiva" Margin="5 0 5 5" Background="AliceBlue"/>
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
